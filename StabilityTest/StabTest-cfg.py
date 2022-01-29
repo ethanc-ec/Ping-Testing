@@ -1,6 +1,6 @@
 from pathlib import Path
 
-def high_ping_checker(filename):
+def high_ping_checker(file_name):
     
     config_scaler = 1.00
     
@@ -16,7 +16,7 @@ def high_ping_checker(filename):
         print("The ping comparison scaler is: {}".format(config_scaler))
         
     # Reading data file
-    with open(Path(__file__).parent / filename) as test_log:
+    with open(Path(__file__).parent / file_name) as test_log:
 
         # Copies the data from the file and puts each line into a list
             contents = test_log.read().splitlines()

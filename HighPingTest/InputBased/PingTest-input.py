@@ -1,12 +1,12 @@
 # pathlib for the file locations
 from pathlib import Path
 
-def high_ping_checker(filename):
+def high_ping_checker(file_name):
     # Safely opens the file and closes it when done
-    with open(Path(__file__).parent / filename) as testLog:
+    with open(Path(__file__).parent / file_name) as test_log:
 
         # Copies the data from the file and puts each line into a list
-        contents = testLog.read().splitlines()
+        contents = test_log.read().splitlines()
         
         high_ping_times = {}
         
